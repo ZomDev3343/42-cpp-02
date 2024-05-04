@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: truello <truello@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tohma <tohma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 13:46:49 by truello           #+#    #+#             */
-/*   Updated: 2024/05/02 14:28:16 by truello          ###   ########.fr       */
+/*   Updated: 2024/05/04 13:45:34 by tohma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 int main(void)
 {
-	Fixed a, b(a), c;
+	Fixed a(-10), b(a), c(4.5f);
 
-	c = b;
+	std::cout << a.toInt() << std::endl;
+	std::cout << b.toInt() << std::endl;
+	std::cout << c.toInt() << std::endl;
 
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-
+	std::cout << a.toFloat() << std::endl;
+	std::cout << b.toFloat() << std::endl;
+	std::cout << c << std::endl;
+	
 	return (0);
 }
