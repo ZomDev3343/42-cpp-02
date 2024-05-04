@@ -6,7 +6,7 @@
 /*   By: tohma <tohma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 13:49:04 by truello           #+#    #+#             */
-/*   Updated: 2024/05/04 13:44:22 by tohma            ###   ########.fr       */
+/*   Updated: 2024/05/04 13:46:45 by tohma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Fixed
 		static const int fract_part = 8;
 	public:
 		Fixed(void);
-		Fixed(Fixed &fixed);
+		Fixed(const Fixed &fixed);
 		Fixed(const int number);
 		Fixed(const float number);
 		~Fixed(void);
