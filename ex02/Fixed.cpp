@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tohma <tohma@student.42.fr>                +#+  +:+       +#+        */
+/*   By: truello <truello@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 14:09:51 by truello           #+#    #+#             */
-/*   Updated: 2024/05/05 22:36:42 by tohma            ###   ########.fr       */
+/*   Updated: 2024/05/16 14:51:06 by truello          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void Fixed::setRawBits(const int p_rawBits)
 
 int	Fixed::toInt(void) const
 {
-	return (this->value << 1 >> Fixed::fract_part + 1 | (this->value >> 31 << 31));	
+	return (this->value << 1 >> Fixed::fract_part + 1 | (this->value >> 31 << 31));
 }
 
 float Fixed::toFloat(void) const
@@ -123,22 +123,22 @@ bool operator!=(const Fixed &a, const Fixed &b)
 	return (!(a == b));
 }
 
-Fixed operator+(Fixed to_add, const Fixed &fixed)
+Fixed operator+(Fixed fixed, const Fixed &to_add)
 {
 	return (Fixed(fixed.toFloat() + to_add.toFloat()));
 }
 
-Fixed operator-(Fixed to_sub, const Fixed &fixed)
+Fixed operator-(Fixed fixed, const Fixed &to_sub)
 {
 	return (Fixed(fixed.toFloat() - to_sub.toFloat()));
 }
 
-Fixed operator/(Fixed to_div, const Fixed &fixed)
+Fixed operator/(Fixed fixed, const Fixed &to_div)
 {
 	return (Fixed(fixed.toFloat() / to_div.toFloat()));
 }
 
-Fixed operator*(Fixed to_mul, const Fixed &fixed)
+Fixed operator*(Fixed fixed, const Fixed &to_mul)
 {
 	return (Fixed(fixed.toFloat() * to_mul.toFloat()));
 }

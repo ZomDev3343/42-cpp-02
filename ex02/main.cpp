@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tohma <tohma@student.42.fr>                +#+  +:+       +#+        */
+/*   By: truello <truello@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 13:46:49 by truello           #+#    #+#             */
-/*   Updated: 2024/05/05 22:34:13 by tohma            ###   ########.fr       */
+/*   Updated: 2024/05/16 14:54:51 by truello          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,14 @@ int main(void)
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 	std::cout << Fixed::max(a, b) << std::endl;
+
+	std::cout << a / b << std::endl;
+	std::cout << b - a << std::endl;
+	std::cout << a + b << std::endl;
+	std::cout << a * b << std::endl;
+	std::cout << Fixed::min(a, b) << std::endl;
+	int z = 0;
+	std::cout << a / Fixed(z) << std::endl;
+
 	return (0);
 }
