@@ -6,7 +6,7 @@
 /*   By: truello <truello@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 22:43:19 by tohma             #+#    #+#             */
-/*   Updated: 2024/05/16 15:06:46 by truello          ###   ########.fr       */
+/*   Updated: 2024/05/16 15:27:46 by truello          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ Point::Point(void)
 	this->y = Fixed(0);
 }
 
-Point::Point(float x, float y)
+Point::Point(Fixed x, Fixed y)
 {
-	this->x = Fixed(x);
-	this->y = Fixed(y);
+	this->x = x;
+	this->y = y;
 }
 
 Point::Point(const Point &point)
@@ -32,7 +32,8 @@ Point::Point(const Point &point)
 
 Point &Point::operator=(const Point &ref_point)
 {
-	*this = Point(ref_point);
+	this->x = ref_point.getX();
+	this->y = ref_point.getY();
 	return (*this);
 }
 
@@ -53,6 +54,6 @@ Fixed Point::getY(void) const
 
 Point operator-(Point point, const Point &to_sub)
 {
-	return (Point(point.getX().toFloat() - to_sub.getX().toFloat(),
-		point.getY().toFloat() - to_sub.getY().toFloat()));
+	return (Point(point.getX() - to_sub.getX(),
+		point.getY() - to_sub.getY()));
 }

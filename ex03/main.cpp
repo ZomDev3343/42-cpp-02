@@ -6,7 +6,7 @@
 /*   By: truello <truello@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 13:46:49 by truello           #+#    #+#             */
-/*   Updated: 2024/05/16 15:10:37 by truello          ###   ########.fr       */
+/*   Updated: 2024/05/16 15:39:05 by truello          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@ int main(void)
 	Point point(2.0f, 1.0f);
 	Point point2(0.5f, 0.35f);
 
-	bsp(a, b, c, point);
-	// std::cout << "point dans ABC : " << bsp(a, b, c, point) << std::endl;
-	// std::cout << "point2 dans ABC : " << bsp(a, b, c, point2) << std::endl;
+	std::cout << "point dans ABC : " << bsp(a, b, c, point) << std::endl;
+	std::cout << "point2 dans ABC : " << bsp(a, b, c, point2) << std::endl;
 
 	return (0);
 }

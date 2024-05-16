@@ -6,7 +6,7 @@
 /*   By: truello <truello@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 14:09:51 by truello           #+#    #+#             */
-/*   Updated: 2024/05/16 15:11:48 by truello          ###   ########.fr       */
+/*   Updated: 2024/05/16 15:34:37 by truello          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,22 +123,22 @@ bool operator!=(const Fixed &a, const Fixed &b)
 	return (!(a == b));
 }
 
-Fixed operator+(Fixed to_add, const Fixed &fixed)
+Fixed operator+(Fixed fixed, const Fixed &to_add)
 {
 	return (Fixed(fixed.toFloat() + to_add.toFloat()));
 }
 
-Fixed operator-(Fixed to_sub, const Fixed &fixed)
+Fixed operator-(Fixed fixed, const Fixed &to_sub)
 {
 	return (Fixed(fixed.toFloat() - to_sub.toFloat()));
 }
 
-Fixed operator/(Fixed to_div, const Fixed &fixed)
+Fixed operator/(Fixed fixed, const Fixed &to_div)
 {
 	return (Fixed(fixed.toFloat() / to_div.toFloat()));
 }
 
-Fixed operator*(Fixed to_mul, const Fixed &fixed)
+Fixed operator*(Fixed fixed, const Fixed &to_mul)
 {
 	return (Fixed(fixed.toFloat() * to_mul.toFloat()));
 }
