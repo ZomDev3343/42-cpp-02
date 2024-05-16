@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tohma <tohma@student.42.fr>                +#+  +:+       +#+        */
+/*   By: truello <truello@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 14:09:51 by truello           #+#    #+#             */
-/*   Updated: 2024/05/05 22:36:42 by tohma            ###   ########.fr       */
+/*   Updated: 2024/05/16 15:11:48 by truello          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Fixed::Fixed(void)
 {
-	value = 0;
+	this->value = 0;
 }
 
 Fixed::Fixed(const Fixed &fixed)
@@ -79,7 +79,7 @@ void Fixed::setRawBits(const int p_rawBits)
 
 int	Fixed::toInt(void) const
 {
-	return (this->value << 1 >> Fixed::fract_part + 1 | (this->value >> 31 << 31));	
+	return (this->value << 1 >> Fixed::fract_part + 1 | (this->value >> 31 << 31));
 }
 
 float Fixed::toFloat(void) const
