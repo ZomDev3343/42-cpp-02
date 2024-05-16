@@ -1,6 +1,6 @@
 SRC=$(shell find . -name \*.cpp -type f -print)
 OBJ=$(patsubst %.cpp, %.o,$(SRC))
-NAME=first_canon
+NAME=first_useful_class
 FLAGS=-Wall -Werror -Wextra -std=c++98
 
 all:
